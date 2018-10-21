@@ -5,7 +5,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(item_params.merge(default))
+    @item = Item.create(strong_params)
+    byebug
     render json: @item, status: 201
   end
 
@@ -31,6 +32,6 @@ class ItemsController < ApplicationController
 
   private
   def strong_params
-    params.require(:item).permit(:name, :item_id, :renter_id, :cost, :discription)
+    params.require(:item).permit(:name, :host_id, :renter_id, :cost, :discription, :image_url)
   end
 end

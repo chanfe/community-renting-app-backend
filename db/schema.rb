@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2018_10_18_184012) do
     t.integer "renter_id"
     t.float "cost"
     t.string "discription"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

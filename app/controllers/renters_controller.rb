@@ -5,7 +5,7 @@ class RentersController < ApplicationController
   end
 
   def create
-    @renter = Renter.create(renter_params.merge(default))
+    @renter = Renter.create(strong_params.merge(default))
     render json: @renter, status: 201
   end
 

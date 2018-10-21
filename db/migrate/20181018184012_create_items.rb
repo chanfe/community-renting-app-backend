@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :renter_id
       t.float :cost
       t.string :discription
+      t.string :image_url
 
       t.timestamps
     end

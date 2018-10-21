@@ -5,8 +5,13 @@ class HostsController < ApplicationController
     render json: @hosts
   end
 
+  def show
+    @host = Host.find(params[:id])
+    render json: @host
+  end
+
   def create
-    @host = Host.create(host_params.merge(default))
+    @host = Host.create(strong_params.merge(default))
     render json: @host, status: 201
   end
 
