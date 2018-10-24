@@ -4,8 +4,13 @@ class RentersController < ApplicationController
     render json: @renters
   end
 
+  def show
+    @renter = Renter.find(params[:id])
+    render json: @renter
+  end
+
   def create
-    @renter = Renter.create(strong_params.merge(default))
+    @renter = Renter.create(strong_params)
     render json: @renter, status: 201
   end
 
@@ -31,6 +36,6 @@ class RentersController < ApplicationController
 
   private
   def strong_params
-    params.require(:renter).permit(:name)
+    params.require(:renter).permit(:id, :name, :username)
   end
 end

@@ -1,5 +1,12 @@
 
 class HostsController < ApplicationController
+  # skip_before_action :authorized, only: [:create]
+
+  def profile
+    render json: { user: HostSerializer.new(current_user) }, status: :accepted
+  end
+
+
   def index
     @hosts = Host.all
     render json: @hosts
@@ -11,8 +18,12 @@ class HostsController < ApplicationController
   end
 
   def create
-    @host = Host.create(strong_params.merge(default))
-    render json: @host, status: 201
+    @host = Host.create(strong_params)
+    if @host.valid?
+      render json: { host: HostSerializer.new(@host) , jwt: @token}, status: :created
+    else
+      render json: { error: 'failed to create host' }, status: :not_acceptable
+    end
   end
 
   def update
@@ -37,7 +48,7 @@ class HostsController < ApplicationController
 
   private
   def strong_params
-    params.require(:host).permit(:name)
+    params.require(:host).permit(:id, :name, :username, :password)
   end
 
 end
