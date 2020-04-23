@@ -1,24 +1,179 @@
-# README
+<!--
+*** Thanks for checking out this README Template. If you have a suggestion that would
+*** make this better please fork the repo and create a pull request or simple open
+*** an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for build-url, contributors-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Build Status][build-shield]][build-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![MIT License][license-shield]][license-url]
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/chanfe/community-renting-app-backend/">
+    <img src="#" alt="Logo" width="80" height="80">
+  </a>
 
-* Services (job queues, cache servers, search engines, etc.)
+  <h3 align="center"># community-renting-app-backend (tentative name)</h3>
 
-* Deployment instructions
+  <p align="center">
+    Equipment Tracker and Maintenance  Log
+    <br />
+    <a href="https://github.com/chanfe/community-renting-app-backend"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/chanfe/community-renting-app-backend">View Demo</a> (Needs link)
+    ·
+    <a href="https://github.com/chanfe/community-renting-app-backend/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/chanfe/community-renting-app-backend/issues">Request Feature</a>
+  </p>
+</p>
 
-* ...
+
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+- [Table of Contents](#Table-of-Contents)
+- [About The Project](#About-The-Project)
+  - [Built With](#Built-With)
+- [Mock up of the application (to be)](#Mock-up-of-the-application-to-be)
+  - [Prerequisites](#Prerequisites)
+  - [Installation](#Installation)
+- [Usage](#Usage)
+- [Roadmap](#Roadmap)
+- [Contributing](#Contributing)
+- [License](#License)
+- [Contact](#Contact)
+- [Acknowledgements](#Acknowledgements)
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This is the API of community renting app.  It have a many to many relationship from sellers to buyers.  
+
+Outline of Features:
+* CRUD of user, users items for rent and users rentted items.
+
+
+### Built With
+* [Ruby on Rails](https://rubyonrails.org/)
+
+
+
+
+<!-- MockUp of the Application (to be removed) -->
+## Mock up of the application (to be)
+<!--[![Product Name Screen Shot][product-screenshot]](https://github.com/chingu-voyages/v10-bears-team-03) -->
+### Prerequisites
+1. 
+```
+```
+
+### Installation
+1. Clone the repo
+```sh
+git clone https:://github.com/your_username_/Project-Name.git
+```
+2. migrate database 
+```sh
+rake db:migrate
+```
+3. Start local server
+```sh
+rails server
+```
+
+<!-- USAGE EXAMPLES -->
+## Usage
+| HTTP METHOD | POST               | GET         | PUT         | DELETE |
+| ----------- | ------------------ | ---------   | ----------- | ------ |
+| CRUD OP     | CREATE             | READ        | UPDATE      | DELETE |
+| /hosts      | Create new hosts   | List hosts  | Bulk update | Error  |
+| /hosts/:id  | Error              | Show Bio    | If exists, update Bio; If not, error | Delete Bio |
+| /items      | Create new items   | List items  | Bulk update | Delete all items |
+| /items/:id  | Error              | Show Bio    | If exists, update item; If not, error | Delete item |
+| /return/:id | Error              | Error       | If exists, update item; If not, error | Error |
+| /renters    | Create new renters | List renters| Bulk update | Error |
+| /renters/:id| Error              | Show Bio    | If exists, update Bio; If not, error | Delete Bio |
+
+for OAuth
+
+POST '/auth', to: 'auth#create'
+GET '/current_user', to: 'auth#show'
+
+_For more examples, you can goto our sample api [Here].(https://community-renting-api.herokuapp.com/)_
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/chanfe/community-renting-app-backend/issues) for a list of proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+[Felix Chan](https://github.com/chanfe)
+
+Project Link: [https://github.com/chanfe/community-renting-app-backend](https://github.com/chanfe/community-renting-app-backend)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[build-shield]: https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square
+[build-url]: #
+[contributors-shield]: https://img.shields.io/badge/contributors-1-orange.svg?style=flat-square
+[contributors-url]: https://github.com/chingu-voyages/v10-bears-team-03/graphs/contributors
+[license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+[license-url]: https://choosealicense.com/licenses/mit
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[product-screenshot]: https://i.imgur.com/Jfnx1uj.png
